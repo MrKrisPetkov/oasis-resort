@@ -1,0 +1,23 @@
+baseURL: ""
+title: "Oasis resort"
+theme: "PaperMod"
+
+params:
+  description: "Welcome to Oasis resort  - A perfect getaway for relaxation and adventure!"
+  defaultTheme: "auto" # Light/dark theme
+  disableSpecial1stPost: true
+  disableScrollToTop: true
+  customCSS:
+    - "css/extended/custom.css"
+
+menu:
+  main:
+    - name: "Home"
+      url: "/"
+      weight: 1
+    - name: "Contact"
+      url: "/contact"
+      weight: 2
+    - name: "More"
+      url: "/more"
+      weight: 3
