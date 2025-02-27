@@ -1,0 +1,81 @@
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  .photo-grid img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+/* Hero Wrapper - Makes the hero section edge-to-edge */
+.hero-wrapper {
+  width: 100vw; /* Full viewport width */
+  margin-left: calc(-50vw + 50%); /* Centers the wrapper */
+}
+
+/* Hero Section */
+.hero {
+  width: 100%;
+  height: 400px; /* Adjust height as needed */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(217, 195, 28, 0.547);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Responsive Hero Section */
+@media (max-width: 768px) {
+  .hero {
+    height: 300px; /* Adjust height for smaller screens */
+  }
+  .hero h1 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Override theme padding for edge-to-edge layout */
+.main {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Gallery Container */
+.gallery-container {
+  width: 100%;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent wrapping of gallery items */
+  padding: 10px 0; /* Add some padding */
+}
+
+/* Gallery */
+.gallery {
+  display: inline-block; /* Ensure gallery items stay in a row */
+}
+
+/* Gallery Item */
+.gallery-item {
+  display: inline-block; /* Display items in a row */
+  margin-right: 10px; /* Add spacing between items */
+  width: 200px; /* Set a fixed width for each item */
+  height: 150px; /* Set a fixed height for each item */
+  overflow: hidden; /* Hide overflow */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+}
+
+/* Gallery Image */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images cover the entire item */
+}
