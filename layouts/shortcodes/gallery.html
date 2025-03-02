@@ -1,13 +1,12 @@
 <div class="gallery-container">
-    <div class="gallery">
-      <div class="gallery-item">
-        <img src="/images/bungalow.webp" alt="Image 1">
-      </div>
-      <div class="gallery-item">
-        <img src="/images/bedview.webp" alt="Image 2">
-      </div>
-      <div class="gallery-item">
-        <img src="/images/gallery/image3.jpg" alt="Image 3">
-      </div>
-    </div>
+  <div class="gallery">
+    {{ range (readDir "static/images/") }}
+      {{ if .IsDir }}
+      {{ else }}
+        <div class="gallery-item">
+          <img src="/images/{{ .Name }}" alt="{{ .Name }}">
+        </div>
+      {{ end }}
+    {{ end }}
   </div>
+</div>
